@@ -50,11 +50,11 @@ class RemoteFeedLoaderTests: XCTestCase {
         
         // Given
         let (sut, client) = makeSUT()
+        var capturedErrors = [RemoteFeedLoader.Error]()
+        let clientError = NSError(domain: "Test", code: 0)
         
         // When
-        var capturedErrors = [RemoteFeedLoader.Error]()
         sut.load { capturedErrors.append($0) }
-        let clientError = NSError(domain: "Test", code: 0)
         client.complete(with: clientError)
         
         // Then
@@ -65,11 +65,10 @@ class RemoteFeedLoaderTests: XCTestCase {
         
         // Given
         let (sut, client) = makeSUT()
-        
-        // When
         let samples = [199, 201, 300, 400, 500]
+        
+        // Then
         samples.enumerated().forEach { index, code in
-            // Then
             expect(sut,
                    toCompleteWithError: .invalidData,
                    when: {
@@ -84,10 +83,7 @@ class RemoteFeedLoaderTests: XCTestCase {
         let (sut, client) = makeSUT()
         let invalidJSON = Data("invalid json".utf8)
         
-        // When
-        
         // Then
-        
         expect(sut,
                toCompleteWithError: .invalidData,
                when: {

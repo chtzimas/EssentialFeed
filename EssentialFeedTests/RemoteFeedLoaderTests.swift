@@ -50,15 +50,15 @@ class RemoteFeedLoaderTests: XCTestCase {
         
         // Given
         let (sut, client) = makeSUT()
-        var capturedErrors = [RemoteFeedLoader.Error]()
+        var capturedResults = [RemoteFeedLoader.Result]()
         let clientError = NSError(domain: "Test", code: 0)
         
         // When
-        sut.load { capturedErrors.append($0) }
+        sut.load { capturedResults.append($0) }
         client.complete(with: clientError)
         
         // Then
-        XCTAssertEqual(capturedErrors, [.connectivity])
+        XCTAssertEqual(capturedResults, [.failure(.connectivity)])
     }
     
     func test_load_deliversErrorOnNon200HTTPResponse() {
@@ -105,12 +105,12 @@ class RemoteFeedLoaderTests: XCTestCase {
                         file: StaticString = #file,
                         line: UInt = #line) {
         
-        var capturedErrors = [RemoteFeedLoader.Error]()
-        sut.load { capturedErrors.append($0) }
+        var capturedResults = [RemoteFeedLoader.Result]()
+        sut.load { capturedResults.append($0) }
         
         action()
         
-        XCTAssertEqual(capturedErrors, [error], file: file, line: line)
+        XCTAssertEqual(capturedResults, [.failure(error)], file: file, line: line)
     }
     
     private class HTTPClientSpy: HTTPClient {

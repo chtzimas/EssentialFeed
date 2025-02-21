@@ -79,8 +79,8 @@
 		080EDEF321B6DA7E00813479 /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
-				8A40DDF32D6212FB00285A31 /* Feed Api */,
 				080EDEF521B6DA7E00813479 /* Info.plist */,
+				8A40DDF32D6212FB00285A31 /* Feed Api */,
 				080EDF1021B6DFA200813479 /* Feed Feature */,
 			);
 			path = EssentialFeed;

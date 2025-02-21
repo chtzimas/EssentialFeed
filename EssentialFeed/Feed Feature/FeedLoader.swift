@@ -9,7 +9,7 @@ public enum LoadFeedResult<Error> {
 	case failure(Error)
 }
 
-protocol FeedLoader {
+public protocol FeedLoader {
     
     associatedtype Error: Swift.Error
     

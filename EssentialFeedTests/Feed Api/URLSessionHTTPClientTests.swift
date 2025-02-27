@@ -41,6 +41,7 @@ class URLSessionHTTPClientTests: XCTestCase {
         
         // Given
         let url = anyURL()
+        let sut = makeSUT()
         let exp = expectation(description: "Wait for request")
         
         // When
@@ -51,7 +52,7 @@ class URLSessionHTTPClientTests: XCTestCase {
             exp.fulfill()
         }
         
-        makeSUT().get(from: url) { _ in }
+        sut.get(from: url) { _ in }
         
         wait(for: [exp], timeout: 1.0)
     }

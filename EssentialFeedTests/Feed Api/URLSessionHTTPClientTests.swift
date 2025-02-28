@@ -23,7 +23,8 @@ class URLSessionHTTPClient {
             if let error {
                 completion(.failure(error))
             } else {
-                completion(.failure(UnexpectedValuesRepresentation()))
+                let error = UnexpectedValuesRepresentation()
+                completion(.failure(error))
             }
         }.resume()
     }
@@ -44,8 +45,8 @@ class URLSessionHTTPClientTests: XCTestCase {
     func test_getFromURL_performsGETRequestWithURL() {
         
         // Given
-        let url = anyURL()
         let sut = makeSUT()
+        let url = anyURL()
         let exp = expectation(description: "Wait for request")
         
         // When
@@ -64,14 +65,14 @@ class URLSessionHTTPClientTests: XCTestCase {
     func test_getFromURL_failsOnRequestError() {
         
         // Given
+        let sut = makeSUT()
         let url = anyURL()
         let error = NSError(domain: "any error", code: 1)
+        let exp = expectation(description: "Wait for completion")
         URLProtocolStub.stub(data: nil, response: nil, error: error)
         
-        let exp = expectation(description: "Wait for completion")
-        
         // When
-        makeSUT().get(from: url) { result in
+        sut.get(from: url) { result in
             
             // Then
             switch result {
@@ -91,11 +92,12 @@ class URLSessionHTTPClientTests: XCTestCase {
     func test_getFromURL_failsOnAllNilValues() {
         
         // Given
-        URLProtocolStub.stub(data: nil, response: nil, error: nil)
+        let sut = makeSUT()
         let exp = expectation(description: "Wait for completion")
+        URLProtocolStub.stub(data: nil, response: nil, error: nil)
         
         // When
-        makeSUT().get(from: anyURL()) { result in
+        sut.get(from: anyURL()) { result in
             // Then
             switch result {
             case .failure:

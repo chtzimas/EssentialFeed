@@ -106,7 +106,7 @@ class URLSessionHTTPClientTests: XCTestCase {
     func test_getFromURL_succeedsWithEmptyDataOnHTTPURLResponseWithNilData() {
         
         // Given
-        let emptyData = Data()
+        let emptyData = emptyData()
         let response = anyHTTPURLResponse()
         
         // When
@@ -176,6 +176,10 @@ class URLSessionHTTPClientTests: XCTestCase {
     
     private func anyData() -> Data {
         Data("any data".utf8)
+    }
+    
+    private func emptyData() -> Data {
+        Data()
     }
     
     private func anyNSError() -> NSError {

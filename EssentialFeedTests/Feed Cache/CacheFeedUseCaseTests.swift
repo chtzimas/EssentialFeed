@@ -77,11 +77,13 @@ final class CacheFeedUseCaseTests: XCTestCase {
     }
 
     private func uniqueItem() -> FeedItem {
-        return FeedItem(id: UUID(), description: "any", location: "any", imageURL: anyURL())
+        FeedItem(id: UUID(), description: "any", location: "any", imageURL: anyURL())
     }
 
     private func anyURL() -> URL {
-        return URL(string: "http://any-url.com")!
+        URL(string: "http://any-url.com")!
+    }
+    
     private func anyNSError() -> NSError {
         NSError(domain: "any error", code: 0)
     }

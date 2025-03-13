@@ -54,7 +54,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         XCTAssertEqual(store.deleteCachedFeedCallCount, 1)
     }
     
-    func test_save_doesNotRequestInsertionOnCacheDeletionError() {
+    func test_save_doesNotRequestCacheInsertionOnDeletionError() {
         
         let (sut, store) = makeSUT()
         let items = [uniqueItem(), uniqueItem()]

@@ -87,7 +87,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         let store = FeedStoreSpy()
         var sut: LocalFeedLoader? = LocalFeedLoader(store: store, currentDate: Date.init)
         
-        var receivedResults = [Error?]()
+        var receivedResults = [LocalFeedLoader.SaveResult]()
         sut?.save([uniqueItem()]) { receivedResults.append($0) }
         
         sut = nil
@@ -101,7 +101,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         let store = FeedStoreSpy()
         var sut: LocalFeedLoader? = LocalFeedLoader(store: store, currentDate: Date.init)
         
-        var receivedResults = [Error?]()
+        var receivedResults = [LocalFeedLoader.SaveResult]()
         sut?.save([uniqueItem()]) { receivedResults.append($0) }
         
         store.completeDeletionSuccessfully()
@@ -125,16 +125,16 @@ final class CacheFeedUseCaseTests: XCTestCase {
        
         let exp = expectation(description: "Wait for save completion")
         
-        var receivedError: Error?
+        var receivedResults = [LocalFeedLoader.SaveResult]()
         sut.save([uniqueItem()]) { error in
-            receivedError = error
+            receivedResults.append(error)
             exp.fulfill()
         }
         
         action()
         wait(for: [exp], timeout: 1.0)
         
-        XCTAssertEqual(receivedError as NSError?, expectedError, file: file, line: line)
+        XCTAssertEqual(receivedResults.map { $0 as NSError? }, [expectedError], file: file, line: line)
     }
     
     private class FeedStoreSpy: FeedStore {

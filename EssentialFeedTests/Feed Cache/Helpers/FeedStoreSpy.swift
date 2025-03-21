@@ -8,7 +8,7 @@
 import EssentialFeed
 import Foundation
 
-class FeedStoreSpy: FeedStore {
+final class FeedStoreSpy: FeedStore {
     
     enum ReceivedMessage: Equatable {
         case deleteCachedFeed

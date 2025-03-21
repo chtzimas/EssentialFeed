@@ -49,11 +49,11 @@ final class LoadFeedUseCaseTests: XCTestCase {
         
         let feed = uniqueImageFeed()
         let fixedCurrentDate = Date()
-        let lessThanSevenYearsOldTimestamp = fixedCurrentDate.adding(days: -7).adding(seconds: 1)
+        let lessThanSevenDaysOldTimestamp = fixedCurrentDate.adding(days: -7).adding(seconds: 1)
         let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
         
         expect(sut, toCompleteWith: .success(feed.models), when: {
-            store.completeRetrieval(with: feed.local, timestamp: lessThanSevenYearsOldTimestamp)
+            store.completeRetrieval(with: feed.local, timestamp: lessThanSevenDaysOldTimestamp)
         })
     }
     

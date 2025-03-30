@@ -1,5 +1,5 @@
 //
-//  LoadFeedUseCaseTests.swift
+//  LoadFeedCacheUseCaseTests.swift
 //  EssentialFeedTests
 //
 //  Created by Christos Tzimas on 20/3/25.
@@ -8,7 +8,7 @@
 import EssentialFeed
 import XCTest
 
-final class LoadFeedUseCaseTests: XCTestCase {
+final class LoadFeedCacheUseCaseTests: XCTestCase {
     
     func test_init_doesNotMessageStoreUponCreation() {
         

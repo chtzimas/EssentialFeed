@@ -162,8 +162,8 @@ final class CodableFeedStoreTests: XCTestCase {
     }
     
     private func undoStoreSideEffects() {
-        super.tearDown()
         deleteStoreArtifacts()
+        super.tearDown()
     }
     
     private func deleteStoreArtifacts() {

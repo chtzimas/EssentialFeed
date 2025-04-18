@@ -9,7 +9,7 @@ protocol FeedStoreSpecs {
     
     func test_retrieve_deliversEmptyOnEmptyCache()
     func test_retrieve_hasNoSideEffectsOnEmptyCache()
-    func test_retrieve_deliversInsertedValuesOnNonEmptyCache()
+    func test_retrieve_deliversFoundValuesOnNonEmptyCache()
     func test_retrieve_hasNoSideEffectsOnNonEmptyCache()
     
     func test_insert_deliversNoErrorOnEmptyCache()
@@ -26,7 +26,7 @@ protocol FeedStoreSpecs {
 
 protocol FailableRetrieveFeedStoreSpecs: FeedStoreSpecs {
     func test_retrieve_deliversFailureOnRetrievalError()
-    func test_retrieve_hasNoSideEffectsOnRetrievalError()
+    func test_retrieve_hasNoSideEffectsOnFailure()
 }
 
 protocol FailableInsertFeedStoreSpecs: FeedStoreSpecs {

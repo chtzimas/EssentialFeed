@@ -1,5 +1,5 @@
 //
-//  RemoteFeedLoaderTests.swift
+//  LoadFeedFromRemoteUseCaseTests.swift
 //  EssentialFeedTests
 //
 //  Created by Christos Tzimas on 16/2/25.
@@ -8,7 +8,7 @@
 import XCTest
 import EssentialFeed
 
-final class RemoteFeedLoaderTests: XCTestCase {
+final class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
     func test_init_doesNotRequestDataFromURL() {
         
@@ -156,12 +156,12 @@ final class RemoteFeedLoaderTests: XCTestCase {
     private func makeItem(id: UUID,
                           description: String? = nil,
                           location: String? = nil,
-                          imageURL: URL) -> (model: FeedItem, json: [String: Any]) {
+                          imageURL: URL) -> (model: FeedImage, json: [String: Any]) {
         
-        let item = FeedItem(id: id,
-                            description: description,
-                            location: location,
-                            imageURL: imageURL)
+        let item = FeedImage(id: id,
+                             description: description,
+                             location: location,
+                             url: imageURL)
         
         let json = ["id": id.uuidString,
                     "description": description,
@@ -192,7 +192,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
             case let (.success(receivedItems), .success(expectedItems)):
                 XCTAssertEqual(receivedItems, expectedItems, file: file, line: line)
                 
-            case let (.failure(receivedError), .failure(expectedError)):
+            case let (.failure(receivedError as RemoteFeedLoader.Error), .failure(expectedError as RemoteFeedLoader.Error)):
                 XCTAssertEqual(receivedError, expectedError, file: file, line: line)
                 
             default:

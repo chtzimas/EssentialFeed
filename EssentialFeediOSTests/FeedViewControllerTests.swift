@@ -52,20 +52,11 @@ final class FeedViewController: UITableViewController {
 
 final class FeedViewControllerTests: XCTestCase {
     
-    func test_init_doesNotLoadFeed() {
+    func test_loadFeedActions_requestFeedFromLoader() {
         
         let (_, loader) = makeSUT()
 
-        XCTAssertEqual(loader.loadCallCount, 0)
-    }
-    
-    func test_viewDidLoad_loadsFeed() {
-        
-        let (sut, loader) = makeSUT()
-
-        sut.loadViewIfNeeded()
-        
-        XCTAssertEqual(loader.loadCallCount, 1)
+        XCTAssertEqual(loader.loadCallCount, 0, "Expected no loading requests before view is loaded")
     }
     
     func test_pullToRefresh_loadsFeed() {
@@ -90,7 +81,7 @@ final class FeedViewControllerTests: XCTestCase {
         let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
-        loader.completeFeedLoading()
+        loader.completeFeedLoading(at: 0)
         
         XCTAssertFalse(sut.isShowingLoadingIndicator)
     }
@@ -109,7 +100,7 @@ final class FeedViewControllerTests: XCTestCase {
         let (sut, loader) = makeSUT()
         
         sut.simulateAppearance()
-        loader.completeFeedLoading()
+        loader.completeFeedLoading(at: 0)
         
         XCTAssertFalse(sut.isShowingLoadingIndicator)
     }
@@ -136,8 +127,8 @@ final class FeedViewControllerTests: XCTestCase {
             completions.append(completion)
         }
         
-        func completeFeedLoading() {
-            completions[0](.success([]))
+        func completeFeedLoading(at index: Int) {
+            completions[index](.success([]))
         }
     }
 }

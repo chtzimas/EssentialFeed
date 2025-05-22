@@ -31,6 +31,7 @@
 		2AE78B202DBA033C00E3D6C0 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE78B1F2DBA033C00E3D6C0 /* CoreDataHelpers.swift */; };
 		2AE78B222DBA043D00E3D6C0 /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE78B212DBA043D00E3D6C0 /* ManagedCache.swift */; };
 		2AE78B242DBA050200E3D6C0 /* ManagedFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE78B232DBA050200E3D6C0 /* ManagedFeedImage.swift */; };
+		2AE7C01B2DDDD5FC00B82550 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7C01A2DDDD5FC00B82550 /* FeedImageCell.swift */; };
 		2AF0AD852DD3145900FA9B80 /* CI_iOS.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 2AF0AD842DD3145900FA9B80 /* CI_iOS.xctestplan */; };
 		2AF0AD862DD3145900FA9B80 /* CI_iOS.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 2AF0AD842DD3145900FA9B80 /* CI_iOS.xctestplan */; };
 		2AF0AD872DD3145900FA9B80 /* CI_iOS.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 2AF0AD842DD3145900FA9B80 /* CI_iOS.xctestplan */; };
@@ -136,6 +137,7 @@
 		2AE78B1F2DBA033C00E3D6C0 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		2AE78B212DBA043D00E3D6C0 /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
 		2AE78B232DBA050200E3D6C0 /* ManagedFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
+		2AE7C01A2DDDD5FC00B82550 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 		2AF0AD842DD3145900FA9B80 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_iOS.xctestplan; sourceTree = "<group>"; };
 		2AF346282DDA004A00FEBFFC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		8A06180D2D6892B000A5C6BA /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				2AF346282DDA004A00FEBFFC /* FeedViewController.swift */,
+				2AE7C01A2DDDD5FC00B82550 /* FeedImageCell.swift */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AF346292DDA004A00FEBFFC /* FeedViewController.swift in Sources */,
+				2AE7C01B2DDDD5FC00B82550 /* FeedImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,6 +914,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = EssentialFeed/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -941,6 +946,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = EssentialFeed/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

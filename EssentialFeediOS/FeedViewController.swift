@@ -67,6 +67,7 @@ final public class FeedViewController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cellModel = tableModel[indexPath.row]
         let cell = FeedImageCell()
         cell.locationContainer.isHidden = (cellModel.location == nil)
@@ -75,13 +76,23 @@ final public class FeedViewController: UITableViewController {
         cell.feedImageView.image = nil
         cell.feedImageRetryButton.isHidden = true
         cell.feedImageContainer.isShimmering = true
-        tasks[indexPath] = imageLoader?.loadImageData(from: cellModel.url) { [weak cell] result in
-            let data = try? result.get()
-            let image = data.map(UIImage.init) ?? nil
-            cell?.feedImageView.image = image
-            cell?.feedImageRetryButton.isHidden = (image != nil)
-            cell?.feedImageContainer.isShimmering = false
+        
+        let loadImage = { [weak self, weak cell] in
+            
+            guard let self else { return }
+
+            self.tasks[indexPath] = self.imageLoader?.loadImageData(from: cellModel.url) { [weak cell] result in
+                let data = try? result.get()
+                let image = data.map(UIImage.init) ?? nil
+                cell?.feedImageView.image = image
+                cell?.feedImageRetryButton.isHidden = (image != nil)
+                cell?.feedImageContainer.isShimmering = false
+            }
         }
+
+        cell.onRetry = loadImage
+        loadImage()
+
         return cell
     }
     

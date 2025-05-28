@@ -284,6 +284,42 @@
 			path = "Feed Feature";
 			sourceTree = "<group>";
 		};
+		2A0E0E622DE6D35000E4FE1E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2AB70FF32DD30E49007945CD /* FeedViewControllerTests.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A0E0E632DE6D36E00E4FE1E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2A0E0E602DE6D20A00E4FE1E /* UIControl+TestHelpers.swift */,
+				2A0E0E5E2DE6D1C200E4FE1E /* UIButton+TestHelpers.swift */,
+				2A0E0E5C2DE6D17000E4FE1E /* UIRefreshControl+TestHelpers.swift */,
+				2A0E0E5A2DE6D0E900E4FE1E /* UIImage+TestHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2A0E0E642DE6D38800E4FE1E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2AF346282DDA004A00FEBFFC /* FeedViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A0E0E652DE6D39200E4FE1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2AE7C01A2DDDD5FC00B82550 /* FeedImageCell.swift */,
+				2A8CEED22DDF509700E609C9 /* UIView+Shimmering.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2A70B0712DC1EAC0005CAD4B /* EssentialFeedCacheIntegrationTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,9 +350,8 @@
 		2AB70FF12DD30E47007945CD /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
-				2AF346282DDA004A00FEBFFC /* FeedViewController.swift */,
-				2A8CEED22DDF509700E609C9 /* UIView+Shimmering.swift */,
-				2AE7C01A2DDDD5FC00B82550 /* FeedImageCell.swift */,
+				2A0E0E652DE6D39200E4FE1E /* Views */,
+				2A0E0E642DE6D38800E4FE1E /* Controllers */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
@@ -324,11 +359,8 @@
 		2AB70FF42DD30E49007945CD /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				2AB70FF32DD30E49007945CD /* FeedViewControllerTests.swift */,
-				2A0E0E602DE6D20A00E4FE1E /* UIControl+TestHelpers.swift */,
-				2A0E0E5E2DE6D1C200E4FE1E /* UIButton+TestHelpers.swift */,
-				2A0E0E5C2DE6D17000E4FE1E /* UIRefreshControl+TestHelpers.swift */,
-				2A0E0E5A2DE6D0E900E4FE1E /* UIImage+TestHelpers.swift */,
+				2A0E0E632DE6D36E00E4FE1E /* Helpers */,
+				2A0E0E622DE6D35000E4FE1E /* Controllers */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";

@@ -11,7 +11,7 @@ import Foundation
 
 extension FeedViewControllerTests {
     
-    final class LoaderSpy: FeedLoader, FeedImageDataLoader {
+    class LoaderSpy: FeedLoader, FeedImageDataLoader {
         
         // MARK: - FeedLoader
         

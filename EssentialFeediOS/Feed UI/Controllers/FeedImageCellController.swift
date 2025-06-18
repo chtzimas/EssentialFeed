@@ -38,6 +38,10 @@ final class FeedImageCellController: FeedImageView {
         delegate.didCancelImageRequest()
     }
     
+    private func releaseCellForReuse() {
+        cell = nil
+    }
+    
     func display(_ viewModel: FeedImageViewModel<UIImage>) {
         cell?.locationContainer.isHidden = !viewModel.hasLocation
         cell?.locationLabel.text = viewModel.location
@@ -46,9 +50,8 @@ final class FeedImageCellController: FeedImageView {
         cell?.feedImageContainer.isShimmering = viewModel.isLoading
         cell?.feedImageRetryButton.isHidden = !viewModel.shouldRetry
         cell?.onRetry = delegate.didRequestImage
-    }
-    
-    private func releaseCellForReuse() {
-        cell = nil
+        cell?.onReuse = { [weak self] in
+            self?.releaseCellForReuse()
+        }
     }
 }

@@ -125,6 +125,7 @@ Location</string>
                         <connections>
                             <outlet property="dataSource" destination="ywm-ad-U8i" id="r2c-yH-Hbu"/>
                             <outlet property="delegate" destination="ywm-ad-U8i" id="fTX-XF-133"/>
+                            <outlet property="prefetchDataSource" destination="ywm-ad-U8i" id="1jo-4Z-faT"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Feed" id="tVY-yI-bTl"/>

@@ -29,7 +29,6 @@
 		2A7104E02E058A02002758B8 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A7104DE2E058A02002758B8 /* Feed.strings */; };
 		2A7104E32E058C31002758B8 /* FeedViewControllerTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7104E22E058C2D002758B8 /* FeedViewControllerTests+Localization.swift */; };
 		2A7104E82E0593EE002758B8 /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7104E72E0593EE002758B8 /* FeedLocalizationTests.swift */; };
-		2A7A77352E1E3C10006C6070 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A7A77332E1E3C10006C6070 /* Feed.strings */; };
 		2A8438042E1ECB97002274E8 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8438032E1ECB97002274E8 /* FeedPresenter.swift */; };
 		2A88FFE02DB28EFF00854850 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88FFDF2DB28EFF00854850 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */; };
 		2A88FFE22DB291E500854850 /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88FFE12DB291E500854850 /* XCTestCase+FailableInsertFeedStoreSpecs.swift */; };
@@ -53,6 +52,7 @@
 		2AAC163F2E1F8049006EEC52 /* FeedVieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC163E2E1F8049006EEC52 /* FeedVieModel.swift */; };
 		2AAC16412E1F8082006EEC52 /* FeedLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC16402E1F8082006EEC52 /* FeedLoadingViewModel.swift */; };
 		2AAC16432E1F80BB006EEC52 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC16422E1F80BB006EEC52 /* FeedErrorViewModel.swift */; };
+		2AAC16442E1F8233006EEC52 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A7A77332E1E3C10006C6070 /* Feed.strings */; };
 		2AAD78602DC24B990051A212 /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14EE792D955CEB005CF6EF /* FeedCacheTestHelpers.swift */; };
 		2AAD78612DC24BC80051A212 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14EE7D2D955D76005CF6EF /* SharedTestHelpers.swift */; };
 		2AB70FE42DD30DD0007945CD /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB70FDB2DD30DCF007945CD /* EssentialFeediOS.framework */; };
@@ -818,6 +818,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAC16442E1F8233006EEC52 /* Feed.strings in Resources */,
 				2AF0AD862DD3145900FA9B80 /* CI_iOS.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -826,7 +827,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A7A77352E1E3C10006C6070 /* Feed.strings in Resources */,
 				2AF0AD852DD3145900FA9B80 /* CI_iOS.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

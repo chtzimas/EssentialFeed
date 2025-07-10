@@ -1,5 +1,5 @@
 //
-//  FeedPresentationTests.swift
+//  FeedPresenterTests.swift
 //  EssentialFeedTests
 //
 //  Created by Christos Tzimas on 8/7/25.

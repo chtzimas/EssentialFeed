@@ -1,12 +1,12 @@
 //
 //  FeedLocalizationTests.swift
-//  EssentialFeediOSTests
+//  EssentialFeedTests
 //
-//  Created by Christos Tzimas on 20/6/25.
+//  Created by Christos Tzimas on 10/7/25.
 //
 
 import XCTest
-@testable import EssentialFeediOS
+import EssentialFeed
 
 final class FeedLocalizationTests: XCTestCase {
 
@@ -63,3 +63,4 @@ final class FeedLocalizationTests: XCTestCase {
         }
     }
 }
+

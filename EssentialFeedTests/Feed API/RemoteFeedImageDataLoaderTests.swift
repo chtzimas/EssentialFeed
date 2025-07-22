@@ -30,7 +30,7 @@ class RemoteFeedImageDataLoader {
     }
 }
 
-class RemoteFeedImageDataLoaderTests: XCTestCase {
+final class RemoteFeedImageDataLoaderTests: XCTestCase {
     
     func test_init_doesNotPerformAnyURLRequest() {
         

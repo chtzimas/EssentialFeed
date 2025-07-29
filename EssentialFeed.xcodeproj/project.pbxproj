@@ -57,7 +57,7 @@
 		2ABDC9892E350414003E1DCE /* RemoteFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDC9882E350414003E1DCE /* RemoteFeedImageDataLoader.swift */; };
 		2ABDC98C2E351104003E1DCE /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDC98B2E351104003E1DCE /* HTTPURLResponse+StatusCode.swift */; };
 		2ABDC98E2E351375003E1DCE /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDC98D2E351375003E1DCE /* URLProtocolStub.swift */; };
-		2ABDC9932E352AB1003E1DCE /* LocalFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDC98F2E352AB1003E1DCE /* LocalFeedImageDataLoaderTests.swift */; };
+		2ABDC9932E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDC98F2E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift */; };
 		2AC01A802E38963A00891F5B /* FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC01A7F2E38963A00891F5B /* FeedImageDataStore.swift */; };
 		2AC01A822E38965900891F5B /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC01A812E38965900891F5B /* LocalFeedImageDataLoader.swift */; };
 		2AC25A792E2E0900004866A7 /* LoadFeedImageDataFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC25A782E2E0900004866A7 /* LoadFeedImageDataFromRemoteUseCaseTests.swift */; };
@@ -209,7 +209,7 @@
 		2ABDC9882E350414003E1DCE /* RemoteFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		2ABDC98B2E351104003E1DCE /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		2ABDC98D2E351375003E1DCE /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
-		2ABDC98F2E352AB1003E1DCE /* LocalFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
+		2ABDC98F2E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		2AC01A7F2E38963A00891F5B /* FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStore.swift; sourceTree = "<group>"; };
 		2AC01A812E38965900891F5B /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		2AC25A782E2E0900004866A7 /* LoadFeedImageDataFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
@@ -610,7 +610,7 @@
 				2A88FFE52DB2937800854850 /* FeedStoreSpecs */,
 				8A06F3E72D8C6287003687B8 /* Helpers */,
 				8A06F3E52D8C6023003687B8 /* LoadFeedCacheUseCaseTests.swift */,
-				2ABDC98F2E352AB1003E1DCE /* LocalFeedImageDataLoaderTests.swift */,
+				2ABDC98F2E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift */,
 				8A8D968C2D952B1E005E5882 /* ValidateFeedCacheUseCaseTests.swift */,
 				8AE9781D2D820BCB0098D282 /* CacheFeedUseCaseTests.swift */,
 				2AC439F92DB3DFA400AD0D98 /* CoreDataFeedStoreTests.swift */,
@@ -917,7 +917,7 @@
 				8A06F3E62D8C6023003687B8 /* LoadFeedCacheUseCaseTests.swift in Sources */,
 				2AAC16462E1F87BA006EEC52 /* FeedLocalizationTests.swift in Sources */,
 				8A06F3E92D8C62BA003687B8 /* FeedStoreSpy.swift in Sources */,
-				2ABDC9932E352AB1003E1DCE /* LocalFeedImageDataLoaderTests.swift in Sources */,
+				2ABDC9932E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */,
 				2ABDC9872E350301003E1DCE /* HTTPClientSpy.swift in Sources */,
 				8A14EE7F2D955D76005CF6EF /* SharedTestHelpers.swift in Sources */,
 				8A0835552D6C91C300E25847 /* URLSessionHTTPClientTests.swift in Sources */,

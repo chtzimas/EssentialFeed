@@ -60,6 +60,8 @@
 		2ABDC9932E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDC98F2E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift */; };
 		2AC01A802E38963A00891F5B /* FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC01A7F2E38963A00891F5B /* FeedImageDataStore.swift */; };
 		2AC01A822E38965900891F5B /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC01A812E38965900891F5B /* LocalFeedImageDataLoader.swift */; };
+		2AC01A872E389F7B00891F5B /* FeedImageDataStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC01A862E389F7B00891F5B /* FeedImageDataStoreSpy.swift */; };
+		2AC01A882E389F7B00891F5B /* FeedImageDataStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC01A862E389F7B00891F5B /* FeedImageDataStoreSpy.swift */; };
 		2AC25A792E2E0900004866A7 /* LoadFeedImageDataFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC25A782E2E0900004866A7 /* LoadFeedImageDataFromRemoteUseCaseTests.swift */; };
 		2AC25A7A2E2E171E004866A7 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0E0E722DE6D7FE00E4FE1E /* FeedImageDataLoader.swift */; };
 		2AC439FA2DB3DFA400AD0D98 /* CoreDataFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC439F92DB3DFA400AD0D98 /* CoreDataFeedStoreTests.swift */; };
@@ -212,6 +214,7 @@
 		2ABDC98F2E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		2AC01A7F2E38963A00891F5B /* FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStore.swift; sourceTree = "<group>"; };
 		2AC01A812E38965900891F5B /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
+		2AC01A862E389F7B00891F5B /* FeedImageDataStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStoreSpy.swift; sourceTree = "<group>"; };
 		2AC25A782E2E0900004866A7 /* LoadFeedImageDataFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		2AC439F92DB3DFA400AD0D98 /* CoreDataFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStoreTests.swift; sourceTree = "<group>"; };
 		2AC98ACD2DAFE92500AAD96A /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
@@ -554,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				8A06F3E82D8C62BA003687B8 /* FeedStoreSpy.swift */,
+				2AC01A862E389F7B00891F5B /* FeedImageDataStoreSpy.swift */,
 				8A14EE792D955CEB005CF6EF /* FeedCacheTestHelpers.swift */,
 			);
 			path = Helpers;
@@ -922,6 +926,7 @@
 				8A14EE7F2D955D76005CF6EF /* SharedTestHelpers.swift in Sources */,
 				8A0835552D6C91C300E25847 /* URLSessionHTTPClientTests.swift in Sources */,
 				2A88FFE42DB292D700854850 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */,
+				2AC01A882E389F7B00891F5B /* FeedImageDataStoreSpy.swift in Sources */,
 				2AD8A9322E1CD9FA00F79139 /* FeedPresenterTests.swift in Sources */,
 				2A88FFE02DB28EFF00854850 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */,
 				8AE9781E2D820BCB0098D282 /* CacheFeedUseCaseTests.swift in Sources */,
@@ -938,6 +943,7 @@
 			files = (
 				2AAD78612DC24BC80051A212 /* SharedTestHelpers.swift in Sources */,
 				2A70B0722DC1EAC0005CAD4B /* EssentialFeedCacheIntegrationTests.swift in Sources */,
+				2AC01A872E389F7B00891F5B /* FeedImageDataStoreSpy.swift in Sources */,
 				2AAD78602DC24B990051A212 /* FeedCacheTestHelpers.swift in Sources */,
 				2AC66C862DC1ED0A00F9793D /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);

@@ -52,6 +52,7 @@ final class ValidateFeedCacheUseCaseTests: XCTestCase {
     }
     
     func test_validateCache_failsOnDeletionErrorOfExpiredCache() {
+        
         let feed = uniqueImageFeed()
         let fixedCurrentDate = Date()
         let expiredTimestamp = fixedCurrentDate.minusFeedCacheMaxAge().adding(seconds: -1)
@@ -65,6 +66,7 @@ final class ValidateFeedCacheUseCaseTests: XCTestCase {
     }
 
     func test_validateCache_succeedsOnSuccessfulDeletionOfExpiredCache() {
+        
         let feed = uniqueImageFeed()
         let fixedCurrentDate = Date()
         let expiredTimestamp = fixedCurrentDate.minusFeedCacheMaxAge().adding(seconds: -1)

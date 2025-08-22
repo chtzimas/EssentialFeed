@@ -66,6 +66,7 @@
 		2A7A486B2E58CFEF0057AA42 /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		2A7A486E2E58D0780057AA42 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		2A7A48702E58D0C80057AA42 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		2A90135A2E590F67007D8423 /* CI_EssentialApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CI_EssentialApp.xctestplan; path = ../CI_EssentialApp.xctestplan; sourceTree = "<group>"; };
 		2A9DB1182E5601D500458F6D /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9DB12E2E5601D700458F6D /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +129,7 @@
 		2A9DB10F2E5601D500458F6D = {
 			isa = PBXGroup;
 			children = (
+				2A90135A2E590F67007D8423 /* CI_EssentialApp.xctestplan */,
 				2A7967F72E58C23C00A77FE1 /* EssentialApp */,
 				2A79680B2E58C5DC00A77FE1 /* EssentialAppTests */,
 				2AD2AB002E5608FF00A25E20 /* Frameworks */,

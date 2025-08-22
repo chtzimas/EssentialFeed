@@ -17,6 +17,7 @@
 		2A7968082E58C33B00A77FE1 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7968052E58C33B00A77FE1 /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A7968092E58C33B00A77FE1 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7968062E58C33B00A77FE1 /* EssentialFeediOS.framework */; };
 		2A79680A2E58C33B00A77FE1 /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7968062E58C33B00A77FE1 /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A79680D2E58C5F200A77FE1 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A79680C2E58C5F200A77FE1 /* FeedLoaderWithFallbackCompositeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,17 +55,10 @@
 		2A7967F62E58C23C00A77FE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A7968052E58C33B00A77FE1 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7968062E58C33B00A77FE1 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A79680C2E58C5F200A77FE1 /* FeedLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		2A9DB1182E5601D500458F6D /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9DB12E2E5601D700458F6D /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		2A9DB1312E5601D700458F6D /* EssentialAppTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = EssentialAppTests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2A9DB1152E5601D500458F6D /* Frameworks */ = {
@@ -100,11 +94,19 @@
 			path = EssentialApp;
 			sourceTree = "<group>";
 		};
+		2A79680B2E58C5DC00A77FE1 /* EssentialAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A79680C2E58C5F200A77FE1 /* FeedLoaderWithFallbackCompositeTests.swift */,
+			);
+			path = EssentialAppTests;
+			sourceTree = "<group>";
+		};
 		2A9DB10F2E5601D500458F6D = {
 			isa = PBXGroup;
 			children = (
 				2A7967F72E58C23C00A77FE1 /* EssentialApp */,
-				2A9DB1312E5601D700458F6D /* EssentialAppTests */,
+				2A79680B2E58C5DC00A77FE1 /* EssentialAppTests */,
 				2AD2AB002E5608FF00A25E20 /* Frameworks */,
 				2A9DB1192E5601D500458F6D /* Products */,
 			);
@@ -164,9 +166,6 @@
 			dependencies = (
 				2A9DB1302E5601D700458F6D /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				2A9DB1312E5601D700458F6D /* EssentialAppTests */,
-			);
 			name = EssentialAppTests;
 			packageProductDependencies = (
 			);
@@ -189,6 +188,7 @@
 					};
 					2A9DB12D2E5601D700458F6D = {
 						CreatedOnToolsVersion = 16.4;
+						LastSwiftMigration = 1640;
 						TestTargetID = 2A9DB1172E5601D500458F6D;
 					};
 				};
@@ -248,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A79680D2E58C5F200A77FE1 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KA8242WP63;
@@ -476,6 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chtzimas.EssentialAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EssentialApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EssentialApp";
@@ -486,6 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KA8242WP63;

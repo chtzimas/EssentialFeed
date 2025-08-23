@@ -8,7 +8,7 @@
 import Foundation
 import EssentialFeed
 
-class LoaderSpy: FeedImageDataLoader {
+final class FeedImageDataLoaderSpy: FeedImageDataLoader {
     
     private var messages = [(url: URL, completion: (FeedImageDataLoader.Result) -> Void)]()
     

@@ -1,6 +1,6 @@
 //
 //  UIButton+TestHelpers.swift
-//  EssentialFeediOSTests
+//  EssentialAppTests
 //
 //  Created by Christos Tzimas on 28/5/25.
 //

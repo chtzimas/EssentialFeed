@@ -1,6 +1,6 @@
 //
 //  FeedUIIntegrationTests.swift
-//  EssentialFeediOSTests
+//  EssentialAppTests
 //
 //  Created by Christos Tzimas on 13/5/25.
 //

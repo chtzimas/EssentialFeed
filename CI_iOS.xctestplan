@@ -47,14 +47,6 @@
       "parallelizable" : false,
       "target" : {
         "containerPath" : "container:EssentialFeed.xcodeproj",
-        "identifier" : "2AB70FE22DD30DD0007945CD",
-        "name" : "EssentialFeediOSTests"
-      }
-    },
-    {
-      "parallelizable" : false,
-      "target" : {
-        "containerPath" : "container:EssentialFeed.xcodeproj",
         "identifier" : "8ADFCB9F2D77087B00373870",
         "name" : "EssentialFeedAPIEndToEndTests"
       }

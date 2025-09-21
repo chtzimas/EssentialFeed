@@ -16,12 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Vug-f0-WFU" userLabel="ErrorView" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLL-S9-BBO">
-                                    <rect key="frame" x="175" y="-3" width="78" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLL-S9-BBO">
+                                    <rect key="frame" x="4" y="4" width="385" height="24"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <gestureRecognizers/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -34,17 +33,23 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemRedColor"/>
                             <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstItem="gLL-S9-BBO" firstAttribute="leading" secondItem="Vug-f0-WFU" secondAttribute="leading" constant="4" id="Skb-5m-p8b"/>
+                                <constraint firstAttribute="trailing" secondItem="gLL-S9-BBO" secondAttribute="trailing" constant="4" id="f6U-ig-VXt"/>
+                                <constraint firstAttribute="bottom" secondItem="gLL-S9-BBO" secondAttribute="bottom" constant="4" id="iIZ-q2-vaM"/>
+                                <constraint firstItem="gLL-S9-BBO" firstAttribute="top" secondItem="Vug-f0-WFU" secondAttribute="top" constant="4" id="lws-0P-ZIk"/>
+                            </constraints>
                             <connections>
                                 <outlet property="label" destination="gLL-S9-BBO" id="fxR-cG-4X7"/>
                             </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="0Fv-6e-Nfm">
-                            <rect key="frame" x="0.0" y="674" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="690" width="393" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="Y45-Yg-9Ws" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="66" width="393" height="580"/>
+                                <rect key="frame" x="0.0" y="82" width="393" height="580"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y45-Yg-9Ws" id="sb3-6M-k9s">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="580"/>

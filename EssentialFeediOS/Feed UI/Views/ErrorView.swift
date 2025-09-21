@@ -18,7 +18,7 @@ public final class ErrorView: UIView {
     public override func awakeFromNib() {
         super.awakeFromNib()
         
-        label.text = nil
+        alpha = 0
     }
     
     private var isVisible: Bool {

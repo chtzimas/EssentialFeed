@@ -5,6 +5,7 @@
 //  Created by Christos Tzimas on 13/5/25.
 //
 
+import EssentialApp
 import EssentialFeed
 import EssentialFeediOS
 import XCTest

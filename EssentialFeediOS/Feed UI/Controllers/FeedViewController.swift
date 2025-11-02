@@ -26,11 +26,6 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     private var viewAppeared = false
     
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        refresh()
-    }
-    
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         

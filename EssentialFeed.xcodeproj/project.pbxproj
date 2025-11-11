@@ -50,7 +50,6 @@
 		2AAC79962EC21AA10004C40C /* ImageCommentsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC79952EC21AA10004C40C /* ImageCommentsMapperTests.swift */; };
 		2AAD78602DC24B990051A212 /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14EE792D955CEB005CF6EF /* FeedCacheTestHelpers.swift */; };
 		2AAD78612DC24BC80051A212 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14EE7D2D955D76005CF6EF /* SharedTestHelpers.swift */; };
-		2ABDC9872E350301003E1DCE /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDC9862E350301003E1DCE /* HTTPClientSpy.swift */; };
 		2ABDC98C2E351104003E1DCE /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDC98B2E351104003E1DCE /* HTTPURLResponse+StatusCode.swift */; };
 		2ABDC98E2E351375003E1DCE /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDC98D2E351375003E1DCE /* URLProtocolStub.swift */; };
 		2ABDC9932E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDC98F2E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift */; };
@@ -216,7 +215,6 @@
 		2AAC79932EC208180004C40C /* FeedItemsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapperTests.swift; sourceTree = "<group>"; };
 		2AAC79952EC21AA10004C40C /* ImageCommentsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsMapperTests.swift; sourceTree = "<group>"; };
 		2AB70FDB2DD30DCF007945CD /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ABDC9862E350301003E1DCE /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
 		2ABDC98B2E351104003E1DCE /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		2ABDC98D2E351375003E1DCE /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		2ABDC98F2E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
@@ -367,7 +365,6 @@
 				2AD8A9302E1CD9EB00F79139 /* Feed Presentation */,
 				8A54F9472D708D5100126EFB /* Helpers */,
 				080EDF0121B6DA7E00813479 /* Info.plist */,
-				2A699F5F2EBE17D600388FD9 /* Shared API */,
 				2A699F5E2EBE17C400388FD9 /* Shared API Infra */,
 			);
 			path = EssentialFeedTests;
@@ -447,26 +444,10 @@
 			path = "Shared API Infra";
 			sourceTree = "<group>";
 		};
-		2A699F5F2EBE17D600388FD9 /* Shared API */ = {
-			isa = PBXGroup;
-			children = (
-				2A699F612EBE180F00388FD9 /* Helpers */,
-			);
-			path = "Shared API";
-			sourceTree = "<group>";
-		};
 		2A699F602EBE17EF00388FD9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				2ABDC98D2E351375003E1DCE /* URLProtocolStub.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		2A699F612EBE180F00388FD9 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				2ABDC9862E350301003E1DCE /* HTTPClientSpy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -980,7 +961,6 @@
 				8A06F3E92D8C62BA003687B8 /* FeedStoreSpy.swift in Sources */,
 				2ABDC9932E352AB1003E1DCE /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */,
 				2AAC79962EC21AA10004C40C /* ImageCommentsMapperTests.swift in Sources */,
-				2ABDC9872E350301003E1DCE /* HTTPClientSpy.swift in Sources */,
 				8A14EE7F2D955D76005CF6EF /* SharedTestHelpers.swift in Sources */,
 				8A0835552D6C91C300E25847 /* URLSessionHTTPClientTests.swift in Sources */,
 				2A88FFE42DB292D700854850 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */,

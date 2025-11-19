@@ -26,7 +26,7 @@ public final class LoadResourcePresenter {
                           comment: "Error message when loading fails")
     }
     
-    public func didStartLoadingFeed() {
+    public func didStartLoading() {
         errorView.display(.noError)
         loadingView.display(FeedLoadingViewModel(isLoading: true))
     }
